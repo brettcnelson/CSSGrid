@@ -1,7 +1,7 @@
 var grid = document.getElementById('grid');
 
-for (var i = 0 ; i < 12 ; i++) {
-
+for (var i = 0 ; i < 144 ; i++) {
+	grid.innerHTML += '<div class="block">' + (i+1) + '</div>'
 }
 
 
