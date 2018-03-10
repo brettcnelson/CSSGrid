@@ -1,16 +1,14 @@
 var grid = document.getElementById('grid');
 
-for (var i = 0 ; i < 144 ; i++) {
-	grid.innerHTML += '<div class="block">' + (i+1) + '</div>'
+function renderGrid() {
+	grid.innerHTML = '';
+	for (var i = 0 ; i < 800 ; i++) {
+		var div = '<div class="block">';
+		Math.random() < .025 && (div += '<div class="star"></div>');
+		div += '</div>';
+		grid.innerHTML += div;
+	}
+	setTimeout(renderGrid,2000);
 }
 
-
-
-// var grid = document.getElementById('grid');
-// var id = 1;
-// for (var i = 0 ; i < 225 ; i++) {
-// 	var div = document.createElement('DIV');
-// 	div.classList.add('block');
-// 	Math.random() < .1 && div.appendChild(document.createTextNode(id++))
-// 	grid.appendChild(div)
-// }
+renderGrid();

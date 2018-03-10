@@ -4,34 +4,42 @@
 }
 
 #grid {
-	padding: 3%;
 	background-color: #f7f7f7;
 	text-align: center;
 	justify-content: center;
 	display: grid;
-	grid-template-columns: repeat(12, minmax(20px,7vh));
-	grid-auto-rows: minmax(20px,7vh);
+	grid-template-columns: repeat(auto-fit, 2.5vw);
+	grid-auto-rows: 2.5vw;
 }
 
 .block {
-	background-color: blue;
-	border: 1px solid black;
-}
-
-
-
-
-/*#grid {
-	padding: 5em;
-	text-align: center;
-	display: grid;
+	/*border: 1px solid white;*/
+	background-color: black;
+	padding:10%;
 	justify-content: center;
-	background: gray;
-	grid-template-columns: repeat(15, 5vh);
-	grid-auto-rows: 5vh;
 }
 
-.block {
-	background-color: blue;
-	border: 1px solid black;
-}*/
+.star {
+	border: 1px solid blue;
+	border-radius: 50%;
+	background-color: yellow;
+	height: 100%;
+	width: 100%;
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 2s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
